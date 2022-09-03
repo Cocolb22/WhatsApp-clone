@@ -1,0 +1,16 @@
+<%= render "shared/navbar" %>
+
+<div class="container-home">
+  <h1> WhatsApp</h1>
+
+  <h3> A messaging app for friends and more</h3>
+
+      <% if user_signed_in? == false %>
+        <%= link_to "Connecte toi", new_user_session_path %>
+      <% end %>
+
+      <% if user_signed_in? == false %>
+        <%= link_to "S'inscrire", new_user_registration_path %>
+      <% end %>
+
+</div>
