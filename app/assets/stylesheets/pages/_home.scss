@@ -1,0 +1,29 @@
+.navbar {
+  justify-content: space-between;
+  background: white;
+  border-bottom: 2px, solid, lightgreen;
+}
+
+.log-out {
+  color: black;
+
+}
+.container-fluid {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 6px;
+  color: black;
+
+a {
+  color: #59B030;
+  text-decoration: none !important;
+  font-size: 18px;
+}
+}
+
+.container-home {
+text-align: center;
+padding: 20px;
+color: #6BCA3F;
+border-top: #6BCA3F solid;
+}
