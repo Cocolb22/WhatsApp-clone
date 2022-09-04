@@ -1,44 +1,48 @@
-<h2>Créer un compte</h2>
+<div class="container head p-3">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name),  data: {turbo: false}) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+    <h2>Créer un compte</h2>
+    <div class= "container sign-up txt-primary">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name),  data: {turbo: false}) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "Email" %>
-  </div>
+          <div class="field">
+            <%= f.label :email, "Adresse Mail" %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "Email" %>
+          </div>
 
-  <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name, autofocus: true, autocomplete: "Prénom" %>
-  </div>
+          <div class="field">
+            <%= f.label :first_name, "Prénom" %><br />
+            <%= f.text_field :first_name, autofocus: true, autocomplete: "Prénom" %>
+          </div>
 
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name, autofocus: true, autocomplete: "Nom" %>
-  </div>
+          <div class="field">
+            <%= f.label :last_name, "Nom" %><br />
+            <%= f.text_field :last_name, autofocus: true, autocomplete: "Nom" %>
+          </div>
 
-  <div class="field">
-    <%= f.label :phone_number %><br />
-    <%= f.text_field :phone_number, autofocus: true, autocomplete: "Numéro de téléphone" %>
-  </div>
+          <div class="field">
+            <%= f.label :phone_number, "Numéro de téléphone" %><br />
+            <%= f.text_field :phone_number, autofocus: true, autocomplete: "Numéro de téléphone" %>
+          </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "Mot de passe" %>
-  </div>
+          <div class="field">
+            <%= f.label :password, "Mot de passe" %>
+            <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br />
+            <%= f.password_field :password, autocomplete: "Mot de passe" %>
+          </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "Confirmer le mot de passe" %>
-  </div>
+          <div class="field">
+            <%= f.label :password_confirmation, "Confirmer le mot de passe" %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "Confirmer le mot de passe" %>
+          </div>
 
-  <div class="actions">
-    <%= f.submit "Créer un compte" %>
-  </div>
-<% end %>
+          <div class="actions p-3">
+            <%= f.submit "Créer un compte" %>
+          </div>
+      <% end %>
+    </div>
 
-<%= render "devise/shared/links" %>
+  <%= render "devise/shared/links" %>
+</div>
