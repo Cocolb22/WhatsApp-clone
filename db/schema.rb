@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2022_09_04_154711) do
 
   create_table "messages", force: :cascade do |t|
-    t.text "content"
+    t.text "content", null: false
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
