@@ -9,4 +9,5 @@ class User < ApplicationRecord
   validates :phone_number, presence: true, uniqueness: true
 
   has_many :messages, dependent: :destroy
+  has_many :conversations
 end
