@@ -1,0 +1,5 @@
+<h1>Toutes les conversations</h1>
+
+<% @conversations.each do |conversation| %>
+    <%= link_to conversation.name, conversation %>
+<% end %>
