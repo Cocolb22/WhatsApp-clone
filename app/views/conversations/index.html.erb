@@ -10,14 +10,6 @@
           <%= render @users %>
         </div>
       </div>
-      <h4> Conversations </h4>
-      <%= render partial: "layouts/new_conversation_form" %>
-      <div>
-        <%= turbo_stream_from "conversations" %>
-        <div id="conversations">
-          <%= render @conversations %>
-        </div>
-      </div>
     </div>
     <div class="col-md-10 bg-dark text-light">
     <% if @single_conversation %>
