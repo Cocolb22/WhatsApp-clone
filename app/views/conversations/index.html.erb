@@ -1,5 +1,13 @@
-<h1>Toutes les conversations</h1>
+<h1>Mes conversations</h1>
 
 <% @conversations.each do |conversation| %>
     <%= link_to conversation.name, conversation %>
 <% end %>
+
+<div class="container">
+  <h5> Hi <%= @current_user %> </h5>
+  <h4> Users </h4>
+  <%= render @users %>
+  <h4> Conversations </h4>
+  <%= render @conversations %>
+</div>

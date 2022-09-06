@@ -6,6 +6,9 @@ class ConversationsController < ApplicationController
   end
 
   def index
-    @conversations = Conversation.all
+    @current_user = current_user
+    @conversations = Conversation.public_conversations
+    @users = User.all_except(@current_user)
+
   end
 end

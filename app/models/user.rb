@@ -10,4 +10,6 @@ class User < ApplicationRecord
 
   has_many :messages, dependent: :destroy
   has_many :conversations
+
+  scope :all_except, ->(user) { where.not(id: user) }
 end
