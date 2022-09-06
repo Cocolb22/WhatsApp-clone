@@ -10,24 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_04_163654) do
+ActiveRecord::Schema.define(version: 2022_09_06_105034) do
 
   create_table "conversations", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.string "name", null: false
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "message_id", null: false
-    t.index ["message_id"], name: "index_conversations_on_message_id"
-    t.index ["user_id"], name: "index_conversations_on_user_id"
+    t.boolean "is_private", default: false
   end
 
   create_table "messages", force: :cascade do |t|
-    t.text "content", null: false
+    t.string "content"
+    t.integer "conversation_id", null: false
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["conversation_id"], name: "index_messages_on_conversation_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
+  end
+
+  create_table "participants", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "conversation_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["conversation_id"], name: "index_participants_on_conversation_id"
+    t.index ["user_id"], name: "index_participants_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -45,7 +53,8 @@ ActiveRecord::Schema.define(version: 2022_09_04_163654) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "conversations", "messages"
-  add_foreign_key "conversations", "users"
+  add_foreign_key "messages", "conversations"
   add_foreign_key "messages", "users"
+  add_foreign_key "participants", "conversations"
+  add_foreign_key "participants", "users"
 end

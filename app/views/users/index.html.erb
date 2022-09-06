@@ -1,0 +1,12 @@
+<div class="container-home">
+
+  <h1>WhatsApp</h1>
+
+  <%= render "shared/navbar" %>
+  
+</div>
+<ul>
+  <% @users.each do |user| %>
+    <li><%= user.first_name %></li>
+  <% end %>
+</ul>
