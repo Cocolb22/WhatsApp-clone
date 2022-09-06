@@ -16,7 +16,7 @@ class Conversation < ApplicationRecord
   def self.create_private_conversation(users, conversation_name)
     single_conversation = Conversation.create(name: conversation_name, is_private: true)
     users.each do |user|
-      Participant.create(user_id: user.id, conversation_id: single_conversation.id )
+      Participant.create(user_id: user.id, conversation_id: single_conversation.id)
     end
     single_conversation
   end
