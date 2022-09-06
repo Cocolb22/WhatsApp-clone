@@ -1,7 +1,7 @@
 .navbar {
   justify-content: space-between;
   background: white;
-  border-bottom: 2px, solid, lightgreen;
+  border-bottom: 2px, solid, lightgreen ;
 }
 
 .log-out {
@@ -26,4 +26,9 @@ text-align: center;
 padding: 20px;
 color: #6BCA3F;
 border-top: #6BCA3F solid;
+}
+
+.header {
+  text-align: center !important;
+  color: #59B030;
 }
