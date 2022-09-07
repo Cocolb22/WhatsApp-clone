@@ -35,4 +35,10 @@ border-top: #6BCA3F solid;
 
 .links {
   display: grid;
+
+a {
+    color: #59B030;
+    text-decoration: none !important;
+    font-size: 18px;
+  }
 }
