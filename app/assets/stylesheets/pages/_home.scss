@@ -32,3 +32,13 @@ border-top: #6BCA3F solid;
   text-align: center !important;
   color: #59B030;
 }
+
+.links {
+  display: grid;
+
+a {
+    color: #59B030;
+    text-decoration: none !important;
+    font-size: 18px;
+  }
+}

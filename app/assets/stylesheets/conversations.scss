@@ -2,12 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .msg-form {
-  position: absolute;
-  width: 80%
+  position: sticky;
+  width: 80%;
+  bottom: 0;
 }
 
 .col-md-10 {
-  position: relative;
   height: 100vh;
   overflow: scroll;
 }
@@ -25,4 +25,13 @@
   margin-bottom: 10px;
   background-color: #555555 ;
   padding: 10px
+}
+
+#users {
+
+a {
+  color: #59B030;
+  text-decoration: none !important;
+  font-size: 18px;
+}
 }
