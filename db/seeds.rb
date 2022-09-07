@@ -51,49 +51,50 @@ anne_france = User.create(first_name: "Anne-France",
                       phone_number: "0638394041"
                       )
 
-message_1_from_corentin = Message.create(conversation_id:5,
+message_1_from_corentin = Message.create(conversation_id:2,
                                         user_id:1,
                                         content:"Yo gwendal, rdv au bar à 19h?")
 
-message_1_from_gwendal = Message.create(conversation_id:5,
+message_1_from_gwendal = Message.create(conversation_id:2,
                                           user_id:3,
                                           content:"Viens plutôt chez moi, on se matera la ligue des champions")
-message_2_from_corentin = Message.create(conversation_id:5,
+
+message_2_from_corentin = Message.create(conversation_id:2,
                                         user_id:1,
                                         content:"Ok je ramène le saucisson et les bières")
 
-message_3_from_corentin = Message.create(conversation_id:1,
+message_3_from_corentin = Message.create(conversation_id:6,
                                           user_id:1,
                                           content:"Coucou maman, je rentre vers 23h")
 
-message_1_from_anne_france = Message.create(conversation_id:1,
+message_1_from_anne_france = Message.create(conversation_id:6,
                                             user_id:7,
                                             content:"Pas de soucis, il restera du poulet dans le four")
 
-message_4_from_corentin = Message.create(conversation_id:1,
+message_4_from_corentin = Message.create(conversation_id:6,
                                         user_id:1,
                                         content:"Top merci !")
 
-message_5_from_corentin = Message.create(conversation_id:6,
+message_5_from_corentin = Message.create(conversation_id:1,
                                         user_id:1,
                                         content:"On se fait un tennis ce week-end?")
 
-message_1_from_erle = Message.create(conversation_id:6,
+message_1_from_erle = Message.create(conversation_id:1,
                                     user_id:2,
                                     content:"Ok mais assez tôt samedi, j'ai une raclette de prévue avec des potes le soir. Tu veux venir?")
 
-message_6_from_corentin = Message.create(conversation_id:6,
+message_6_from_corentin = Message.create(conversation_id:1,
                                       user_id:1,
                                       content:"Ca marche !J'aurais bien dis oui pour la raclette, mais j'ai un match par équipe le lendemain, et faut qu'on décolle à 6h du mat...")
 
-message_2_from_erle = Message.create(conversation_id:6,
+message_2_from_erle = Message.create(conversation_id:1,
                                       user_id:2,
                                       content:"10h ça te va ?")
 
-message_3_from_erle = Message.create(conversation_id:6,
+message_3_from_erle = Message.create(conversation_id:1,
                                     user_id:2,
                                     content:"Pas de soucis, surtout que t'es pas le dernier à taper dans le fromage et le vin !")
 
-message_5_from_corentin = Message.create(conversation_id:6,
+message_5_from_corentin = Message.create(conversation_id:1,
                                         user_id:1,
                                         content:"Bah ouais, je fais mes réserves pour l'hiver")
