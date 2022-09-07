@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .msg-form {
   position: absolute;
+  bottom: 0;
   width: 80%
 }
 
@@ -25,4 +26,15 @@
   margin-bottom: 10px;
   background-color: #555555 ;
   padding: 10px
+}
+
+#users {
+
+a {
+  color: #59B030;
+  text-decoration: none !important;
+  font-size: 18px;
+}
+
+
 }

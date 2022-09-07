@@ -50,3 +50,27 @@ anne_france = User.create(first_name: "Anne-France",
                       password: "password",
                       phone_number: "0638394041"
                       )
+
+message_1_from_corentin = Message.create(conversation_id:5,
+                                        user_id:1,
+                                        content:"Yo gwendal, rdv au bar à 19h?",
+                                        created_at:"2022-09-06 13:41:00")
+
+message_2_from_corentin = Message.create(conversation_id:5,
+                                        user_id:1,
+                                        content:"Ok je ramène le saucisson et les bières",
+                                        created_at:"2022-09-06 13:50:00")
+
+message_3_from_corentin = Message.create(conversation_id:1,
+                                          user_id:1,
+                                          content:"Coucou maman, je rentre vers 23h",
+                                          created_at:"2022-09-06 13:50:00")
+
+
+
+                                          
+
+message_1_from_gwendal = Message.create(conversation_id:5,
+                                          user_id:3,
+                                          content:"Viens plutôt chez moi, on se matera la ligue des champions",
+                                          created_at:"2022-09-06 13:41:00")
