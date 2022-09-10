@@ -7,6 +7,10 @@
   bottom: 0;
 }
 
+.col-md-2 {
+  text-align: center;
+}
+
 .col-md-10 {
   height: 100vh;
   overflow: scroll;
@@ -28,10 +32,23 @@
 }
 
 #users {
-
+  padding: 12px;
 a {
+
   color: #59B030;
   text-decoration: none !important;
   font-size: 18px;
+  border: solid 1px lightgrey;
+  border-radius:  12px;
+  margin: 6px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)
 }
+
+a:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  color:  #73df42;
+}
+
 }
