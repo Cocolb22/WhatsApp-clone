@@ -1,23 +1,30 @@
-<div class= "header">
-  <h1>Welcome on WhatsApp</h1>
-</div>
+<div class="container-home">
 
-<div class="navbar">
-  <div class="container-fluid">
+  <h1> Welcome on WhatsApp</h1>
 
-        <div class="links">
-          <% if user_signed_in? %>
-            <%= link_to 'Se déconnecter', destroy_user_session_path, :method=>'delete' %>
-          <% end %>
-           <% if user_signed_in? %>
-            <%= link_to 'Accueil', root_path %>
-          <% end %>
-          <% if user_signed_in? == false %>
-              <%= link_to "Connecte toi", new_user_session_path %>
-          <% end %>
-           <% if user_signed_in? == false %>
-              <%= link_to "S'inscrire", new_user_registration_path %>
-          <% end %>
-        </div>
-  </div>
+  <h3> A messaging app for friends and more</h3>
+
+    <div class="links">
+      <% if user_signed_in?  && current_page?(root_path)%>
+        <%= link_to "Mes conversations", conversations_path %>
+      <% end %>
+
+      <% if user_signed_in? == false %>
+        <%= link_to "Connecte toi", new_user_session_path %>
+      <% end %>
+
+      <% if user_signed_in? == false %>
+        <%= link_to "S'inscrire", new_user_registration_path %>
+      <% end %>
+
+      <% if user_signed_in? %>
+          <%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete %>
+      <% end %>
+
+      <% if user_signed_in?  && current_page?(conversations_path)%>
+        <%= link_to "Accueil", root_path %>
+      <% end %>
+
+    </div>
+
 </div>
