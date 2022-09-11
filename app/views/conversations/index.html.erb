@@ -7,7 +7,9 @@
       <div>
         <%= turbo_stream_from "users" %>
           <div id="users">
-            <%= render @users %>
+            <% if user_signed_in? %>
+              <%= render @users %>
+            <% end %>
           </div>
       </div>
     </div>
@@ -24,4 +26,3 @@
     </div>
   </div>
 </div>
-
